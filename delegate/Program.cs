@@ -1,5 +1,6 @@
 ﻿using DelegateAvanced;
 using DelegateAvanced.DelegateBasis;
+using DelegateAvanced.DelegateBuildinMethods.ActionType;
 using DelegateAvanced.MultiCastDelegate;
 using DelegateAvanced.PassDelegateAsParameter;
 
@@ -72,6 +73,29 @@ namespace Delegate
 
             #endregion
 
+            #region Delegate Buildin Methods
+            #region Action (Generic - non Generic)
+            //ActionExamples actionExamples = new();
+
+            //Action nonGenericAction = actionExamples.Play;
+
+            //nonGenericAction.Invoke();
+
+            //Action<string , int , bool> genericAction = actionExamples.Run;
+
+            //genericAction.Invoke("Mohamed" , 0 , false);
+
+            #endregion
+
+            #region Predicate
+
+            #endregion
+
+            #region Func
+
+            #endregion
+
+            #endregion
 
         }
     }
