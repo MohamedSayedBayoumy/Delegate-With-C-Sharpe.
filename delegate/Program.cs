@@ -1,5 +1,6 @@
 ﻿using DelegateAvanced;
 using DelegateAvanced.DelegateBasis;
+using DelegateAvanced.MultiCastDelegate;
 using DelegateAvanced.PassDelegateAsParameter;
 
 namespace Delegate
@@ -38,6 +39,37 @@ namespace Delegate
             //FiliterDelegate filterDelegate = calc.IsOdd;
             //List<int> oddNumbers = calc.FiliterNumber(numbers, filterDelegate);
             //Helper.PrintList<int>(oddNumbers, "Odd Numbers");
+            #endregion
+
+            #region MultiCast Delegate 
+
+            #region MultiCast Delegate With void return type
+            //HouseKeeper houseKeeper = new();
+            //HouseKeepingDelegate? houseKeepingDelegate;
+            //houseKeepingDelegate = houseKeeper.Wash;
+            //houseKeepingDelegate += houseKeeper.Clean;
+
+            //houseKeepingDelegate.Invoke("Delegate");
+
+            //houseKeepingDelegate -= houseKeeper.Wash;
+
+            //Console.WriteLine("After Remove");
+            //houseKeepingDelegate?.Invoke("Delegate"); 
+            #endregion
+
+            #region MultiCast Delegate With return type
+            //Zoo zoo = new();
+            //ZooDelegate? zooDelegate ;
+
+            //zooDelegate = zoo.Lion;
+            //zooDelegate += zoo.Dog;
+            //zooDelegate += zoo.Cat;
+
+            //var result   = zooDelegate.Invoke("Delegate");
+
+            //Console.WriteLine(result); // Here delegate will Trigger all of fun was added , result will be "Delegate Cat" cause they have return type 
+            #endregion
+
             #endregion
 
 
