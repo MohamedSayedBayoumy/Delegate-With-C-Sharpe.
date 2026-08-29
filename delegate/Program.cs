@@ -3,6 +3,7 @@ using DelegateAvanced.DelegateBasis;
 using DelegateAvanced.DelegateBuildinMethods.ActionType;
 using DelegateAvanced.MultiCastDelegate;
 using DelegateAvanced.PassDelegateAsParameter;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Delegate
 {
@@ -89,6 +90,7 @@ namespace Delegate
 
             #region Predicate
 
+
             #endregion
 
             #region Func
@@ -97,6 +99,25 @@ namespace Delegate
 
             #endregion
 
+
+            #region Short Cut Of Delegates
+            // Anonymous Method
+            Func<int, int> anonymousMethod = delegate (int x) { return x * x; };
+            var result = anonymousMethod.Invoke(5);
+            Console.WriteLine($"Anonymous Method: {result}");
+
+            // Lambda Expression
+            Action<int, int> lambdaMethod = (int x, int y) => Console.WriteLine($"Lambda: ${x * y}");
+            lambdaMethod.Invoke(5, 10);
+
+            // Lambda Statement
+            Predicate<int> lambdaStatement = (value) =>
+            {
+                Console.WriteLine($"Lambda Statement: {value} is even? {value % 2 == 0}");
+                return value % 2 == 0;
+            };
+            lambdaStatement.Invoke(4);
+            #endregion
         }
     }
 }
